@@ -1,25 +1,43 @@
 
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  :root{
+	--white:#f2f2f2;
+	--black:#1f1e24;
+	--wine:rgb(142, 74, 73);
   }
   body{
 	margin: 0;
 	padding: 0;
-	background-color: rgb(142, 74, 73);
+	background-color:var(--wine);
 	background-size: cover;
 	
 	
 }
 nav{
-	color: #f2f2f2;
+	color:var(--white);
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-around;
 	position: fixed;
+	z-index: 1;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #1f1e24;
-	box-shadow:  0 2px 0  rgb(142, 74, 73);
+	background-color: var(--black);
+	box-shadow:  0 1px 0  var(--wine);
+}
+label.logo{
+	font-size: 35px;
+	font-weight: bold;
+	color: var(--white);
+	font-family: 'Roboto Flex';
+	padding: 0 50px;
+	line-height: 80px;
+
+
 }
 .nav-list {
 	display: flex;
@@ -27,33 +45,47 @@ nav{
 	list-style: none;
 	font-family:'Roboto Flex';
 	margin: 0 0;
-
+	padding-right: 50px;
+	
 	
 }
 .nav-list li {
-	padding-right: 30px;
+	padding-right: 0px;
 	
 }
 .nav-list li a {
 	text-decoration: none;
 	display: block;
-	padding: 2rem;
+	padding: 27px 50px;
 	font-size:24px;
+	margin-bottom: 0;
 
 }
 .nav-list a:hover{
 	font-size: 24px;
-	background-color: #f2f2f2;
-	color: rgb(142, 74, 73);
+	background-color:var(--white);
+	color: var(--wine);
+
+}
+ nav #icon{
+	color: var(--white);
+	font-size: 60px;
+	float: right;
+	text-align: end;
+	line-height: 80px;
+	margin-right: ;
+	cursor: pointer;
+	display: none;
 }
 .box{
-	width: 450px;
+	width: 25%;
 	background: rbga(0,0,0,0.4);
 	padding: 40px;
 	text-align: center;
 	margin: auto;
 	margin-top: 10%;
-	color:rgb(251, 251, 255) ;
+	color:var(--white) ;
+	float: left;
 	}
 
 
@@ -66,22 +98,43 @@ nav{
 	font-size: 40px;
 	letter-spacing: 4px;
 	font-weight: 100;
-	font color: black;
+	font color: var(--white);
 	font-family: 'Roboto Flex';
 
 
 }
 .box h5{
-	font-size: 25px;
-
+	font-size: 20px;
+	font-family: 'Roboto Flex' ;
 }
-h5 {
-	font-family: 'Roboto Mono'
+.content{
+	float: left;
+	padding-bottom: 210px;
+	padding-top: 70px;
+	width: 75%;
+	position: relative;
+	margin: auto;
+	text-align: center;
 
+	height: 100%;
+	background-color: white;
 }
- .box p{
+	
+  .content p{
+	font-size: 35px;
+	padding-top: 40px;
+	margin-top: 50px;
+	position: relative;
+	left: 0;
 	font-family: 'Roboto Mono', monospace ;
+	color:var(--black);
+	padding-right: 0;
 }
+.content h5{
+	font-size: 40px;
+	font-family: 'Roboto Mono';
+}
+
 a{
 	text-decoration: none;
 	color: rgb(124, 137, 139)
@@ -89,3 +142,43 @@ a{
 h1:hover{
 color: rgb(10, 9, 8,);
 }
+
+
+
+ @media screen and (max-width:997px) {
+	
+	 .nav-list{
+		 flex-direction: column;
+		 justify-content: center;
+		 width: 100%;
+		 padding-right: 0;
+		 padding-left: 0;
+		 text-align: center;
+		 font-size: 10px;
+		
+		
+	 }
+	 .nav-list li a{
+	font-size: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	 }
+	 nav{
+		 justify-content: center;
+		 position: relative;
+	
+	
+
+	 }
+	 label.logo{
+		 display: none;
+	 }
+	
+
+	 .box{
+		 clear: both;
+		 width: 100%;
+	 }
+	 .content{width: 100%;
+	font-size: 15px ;}
+ }

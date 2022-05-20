@@ -145,7 +145,7 @@ color: rgb(10, 9, 8,);
 
 
 
- @media screen and (max-width:997px) {
+ @media screen and (max-width:853px) {
 	
 	 .nav-list{
 		 flex-direction: column;

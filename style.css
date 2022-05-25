@@ -179,8 +179,10 @@ color: rgb(10, 9, 8,);
 		 clear: both;
 		 width: 100%;
 	 }
+         .content{ 
+         width: 100%;
+         }
 	 .content p{
-          width: 100%;
 	font-size: 15px;
 }
          .content h5{
